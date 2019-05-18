@@ -14,6 +14,7 @@
 		CF2F5EFA209CAD9F006139B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF2F5EF8209CAD9F006139B0 /* LaunchScreen.storyboard */; };
 		CF2F5F05209CADA0006139B0 /* beaconTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2F5F04209CADA0006139B0 /* beaconTestTests.swift */; };
 		CF2F5F10209CADA0006139B0 /* beaconTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2F5F0F209CADA0006139B0 /* beaconTestUITests.swift */; };
+		CF2F5F1F209CADD4006139B0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2F5F1E209CADD4006139B0 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		CF2F5F0B209CADA0006139B0 /* beaconTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = beaconTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF2F5F0F209CADA0006139B0 /* beaconTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beaconTestUITests.swift; sourceTree = "<group>"; };
 		CF2F5F11209CADA0006139B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF2F5F1E209CADD4006139B0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF2F5F1F209CADD4006139B0 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 				CF2F5F03209CADA0006139B0 /* beaconTestTests */,
 				CF2F5F0E209CADA0006139B0 /* beaconTestUITests */,
 				CF2F5EED209CAD9D006139B0 /* Products */,
+				CF2F5F1D209CADD4006139B0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +127,14 @@
 				CF2F5F11209CADA0006139B0 /* Info.plist */,
 			);
 			path = beaconTestUITests;
+			sourceTree = "<group>";
+		};
+		CF2F5F1D209CADD4006139B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF2F5F1E209CADD4006139B0 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,13 +205,21 @@
 				TargetAttributes = {
 					CF2F5EEB209CAD9D006139B0 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1020;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					CF2F5EFF209CADA0006139B0 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1020;
 						TestTargetID = CF2F5EEB209CAD9D006139B0;
 					};
 					CF2F5F0A209CADA0006139B0 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1020;
 						TestTargetID = CF2F5EEB209CAD9D006139B0;
 					};
 				};
@@ -437,9 +457,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.masatakaoba.beaconTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.masataka.beaconTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -455,9 +475,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.masatakaoba.beaconTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.masataka.beaconTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -477,7 +497,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.masatakaoba.beaconTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/beaconTest.app/beaconTest";
 			};
@@ -498,7 +518,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.masatakaoba.beaconTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/beaconTest.app/beaconTest";
 			};
@@ -518,7 +538,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.masatakaoba.beaconTestUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = beaconTest;
 			};
@@ -538,7 +558,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.masatakaoba.beaconTestUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = beaconTest;
 			};
